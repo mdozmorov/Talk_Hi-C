@@ -338,6 +338,45 @@ log_2(\hat{IF}_{2D}) = log_2(IF_{2D}) - f(D)/2
 \includegraphics[height=100px]{img/tad_boundary.png}
 \end{center}
 
+## TAD boundary detection
+
+1) Methods that scan the genome for domain boundaries which are characterized by certain local genomic or topological features
+    - **Directionality index (DI)** - quantifies the degree of up/downstream bias of Hi-C read pairs at given genomic loci
+    - **Insulation score (IS)** - quantifies the level of interactions across given genomic loci
+    - **Arrowhead score** - quantifies the likelihood that a spot will present as a corner of dark squares in the heatmap of a Hi-C contact matrix
+    - Other methods: `IC-Finder`, `ClusterTAD`
+
+\tiny J.R. Dixon, S. Selvaraj, F. Yue, A. Kim, Y. Li, Y. Shen, M. Hu, J.S. Liu, B. Ren,
+Topological domains in mammalian genomes identified by analysis of chromatin
+interactions, Nature 485 (7398) (2012) 376–380.
+
+E. Crane, Q. Bian, R.P. McCord, B.R. Lajoie, B.S. Wheeler, E.J. Ralston, S. Uzawa, J. Dekker, B.J. Meyer, Condensin-driven remodelling of X chromosome topology during dosage compensation, Nature 523 (7559) (2015) 240–244.
+
+S.S. Rao, M.H. Huntley, N.C. Durand, E.K. Stamenova, I.D. Bochkov, J.T. Robinson, A.L. Sanborn, I. Machol, A.D. Omer, E.S. Lander, E.L. Aiden, A 3D map of the human genome at kilobase resolution reveals principles of chromatin looping, Cell 159 (7) (2014) 1665–1680.
+
+## TAD boundary detection
+
+2) Methods based on probabilistic models
+    - The models commonly assume that elements in the Hi-C contact matrix follow a probabilistic distribution with undetermined parameter(s). Example: the matrix was modeled by a two-order mixture Gaussian distribution and a two-order mixture logarithmic normal distribution
+    - Given the distribution, seek the genome partition with maximal posterior likelihood
+    - Representative methods: `GMAP`, `PSYCHIC`, `HiCseg`, `TADbit`, `TADtree`
+
+## TAD boundary detection
+
+3) Methods that utilize dynamic programming to optimize a global object function
+    - Representative methods: `Armatus`, `Matryoshka`, `HiCseg`, `TADtree`
+
+4) Methods that treat the Hi-C contact matrix as a graph and solve the partition problem using tools in graph theory
+    - Representative methods: `MrTADFinder`, `3DnetMod` seek community structure in the graph
+    - Spectral clustering
+    - `deDoc` - applies structural information theory to find an optimal coding tree of a Hi-C matrix
+
+\tiny J. Chen, A.O. Hero 3rd, I. Rajapakse, Spectral identification of topological domains,
+Bioinformatics 32 (14) (2016) 2151–2158.
+
+## TAD boundary detection
+
+
 ## TAD boundaries detection
 
 - TAD boundaries can be detected by determining the ratio between its average upstream and downstream contacts (Naumova et al. 2013, Dixon et al. 2012). 
@@ -406,13 +445,15 @@ Barutcu, A. et al. "Chromatin Interaction Analysis Reveals Changes in Small Chro
 \includegraphics[height=180px]{img/hiccups.png}
 \end{center}
 
-## Detecting significant interactions
+## Detecting significant loop interactions
 
 - Idea: perform a parametric fit to best describe the data or bin all pairs of loci with the same genomic distance and then, compute a P-value comparing the observed count for a given contact as compared with all other possible interactions in that bin (Duan et al. 2010). 
-    - Background models can also take additional biases such as domain organization into account (as done by the HOMER software, http://homer.salk.edu/homer/). 
-- The HiCCUPS method compares the counts obtained for a given matrix pixel with the surrounding regions (note, however, that this is computationally expensive) (Rao et al. 2014).
+    - Background models can also take additional biases such as domain organization into account (HOMER, Fit-Hi-C)
+- The HiCCUPS method identifies loops by seeking enrties substantially larger than surrounding entries (Rao et al. 2014).
 
 \tiny Rao, Suhas S. P., Miriam H. Huntley, Neva C. Durand, Elena K. Stamenova, Ivan D. Bochkov, James T. Robinson, Adrian L. Sanborn, et al. "A 3D Map of the Human Genome at Kilobase Resolution Reveals Principles of Chromatin Looping". Cell, 2014. https://doi.org/10.1016/j.cell.2014.11.021.
+
+http://homer.salk.edu/homer/, https://noble.gs.washington.edu/proj/fit-hi-c/
 
 ## Detecting differential interactions
 
@@ -440,6 +481,14 @@ Barutcu, A. et al. "Chromatin Interaction Analysis Reveals Changes in Small Chro
 \begin{center}
 \includegraphics[height=150px]{img/multiHiCcompare_ROC.png}
 \end{center}
+
+## Summary of Hi-C methods for TAD/loop identification
+
+\begin{center}
+\includegraphics[height=200px]{img/hic_methods.png}
+\end{center}
+
+\tiny Li, Xiao, Ziyang An, and Zhihua Zhang. “Comparison of Computational Methods for 3D Genome Analysis at Single-Cell Hi-C Level.” Methods, August 2019, S1046202319300891. https://doi.org/10.1016/j.ymeth.2019.08.005.
 
 ## 3D genome reconstruction
 
@@ -517,6 +566,15 @@ A combinatorial illustration showing TADs, CTCF bindings, corresponding epigenet
 \tiny Nagano,T.et al. "Single-cell Hi-C reveals cell-to-cell variability in chromosome structure". Nature, 2013.
 
 ## Other use of Hi-C: Genome reassembly
+
+
+## Reconstruction of microbial genomes
+
+proximeta.png
+
+\tiny Press, Maximilian O., Andrew H. Wiser, Zev N. Kronenberg, Kyle W. Langford, Migun Shakya, Chien-Chi Lo, Kathryn A. Mueller, Shawn T. Sullivan, Patrick S. G. Chain, and Ivan Liachko. “Hi-C Deconvolution of a Human Gut Microbiome Yields High-Quality Draft Genomes and Reveals Plasmid-Genome Interactions.,” October 5, 2017. https://doi.org/10.1101/198713.
+
+Schematic of the ProxiMeta method for metage- nomic deconvolution. a) First, a sample consisting of mixed organisms is cross-linked with formaldehyde. Cross-links among DNA molecules are highlighted in red. b) DNA extraction yields a population of cross- linked DNAs with free ends from restriction cleavage. These free DNA ends are re-ligated and the result- ing molecules read out with paired-end sequencing. c) Sequences ligated together and sequenced yield linkages between DNA contigs or scaffolds from an independently-generated sequence assembly. These linkages are used in clustering algorithms to decon- volute which DNAs derive from the same cell.
 
 ## Conclusion on Hi-C data
 
