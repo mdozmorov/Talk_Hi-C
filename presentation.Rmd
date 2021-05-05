@@ -1,5 +1,5 @@
 ---
-title: "Genome in 3D and beyond: next of the next-generation sequencing technologies"
+title: "The 3-dimensional genome"
 author: "Mikhail Dozmorov"
 # date: "Spring 2018"
 output:
@@ -16,21 +16,23 @@ output:
 
 ## Genome arithmetics
 
-- ~3,235 billion base pairs (haploid)
-- ~2 meters of DNA in one cell (~500 times distance from Earth to Sun in all cells from human body)
-- How is it packed into the nucleus?
+- Human genome is big - ~3.2 billion base pairs
+- ~4 meters (~12ft) of diploid genome is packed into ~6-10um nucleus
+- ~800 trips from Earth to Sun in ~30T cells from the human body
 
 \begin{center}
-\includegraphics[height=140px]{img/genome.png}
+\includegraphics[height=120px]{img/genome.png}
 \end{center}
 
-\tiny http://uswest.ensembl.org/Homo_sapiens/Location/Genome
+\tiny Human body has approximately 30 trillion human cells (excluding trillions of microbiome cells); Stretched haploid genome would be roughly 2 meters - each cell has 4 meters of DNA (1 m = 3.28 ft); 30 trillion * 4 meters = 120 trillion meters; Convert to miles: 120 trillion meters / 1609.34 = 7.45*10^{10}; Convert to Earth-Sun distance: 7.45*10^{10} / 91.43*10^6 = 814.83
+
+http://uswest.ensembl.org/Homo_sapiens/Location/Genome
 
 ## Why should we care?
 
 - Every cell contains the same genetic material (DNA)
 - Yet, the cells are very different from one another, because the genes are expressed differently and produce different protein quantities.
-- These expression differences are probably linked, in part, to the three-dimensional (3D) organization of the DNA...
+- These expression differences are probably linked, in part, to the three-dimensional (3D) organization of the DNA.
 
 \begin{center}
 \includegraphics[height=100px]{img/lineage.jpg}
@@ -41,8 +43,11 @@ output:
 ## The human genome from a micro to macro scale 
 
 \begin{center}
-\includegraphics[height=190px]{img/genome2.png}
+\includegraphics[height=170px]{img/genome_scales.png}
 \end{center}
+<!-- genome2.png -->
+
+\tiny Hansen, Anders S., Claudia Cattoglio, Xavier Darzacq, and Robert Tjian. “Recent Evidence That TADs and Chromatin Loops Are Dynamic Structures.” Nucleus (Austin, Tex.) 9, no. 1 (01 2018): 20–32. https://doi.org/10.1080/19491034.2017.1389365.
 
 ## Genome in 3D
 
@@ -50,7 +55,7 @@ output:
 \includegraphics[height=130px]{img/fractal_globule.png}
 \end{center}
 
-\tiny https://www.youtube.com/watch?v=0kJqhlyWVDA (30s)
+\tiny https://www.youtube.com/watch?v=0kJqhlyWVDA
 
 Lieberman-Aiden, Erez, Nynke L. van Berkum, Louise Williams, Maxim Imakaev, Tobias Ragoczy, Agnes Telling, Ido Amit, et al. "Comprehensive Mapping of Long-Range Interactions Reveals Folding Principles of the Human Genome." Science, 2009. https://doi.org/10.1126/science.1181369.
 
@@ -63,11 +68,11 @@ https://www.nature.com/news/dna-s-secret-weapon-against-knots-and-tangles-1.2183
 \begin{columns}
 \begin{column}{0.48\textwidth}
 
-\begin{itemize}
-  \item Chromosomes occupy distinct subregions of the nucleus known as chromosome territories (CTs).
-  \item Gene-rich chromosomes and transcriptionally active regions are located close to the center of the nucleus.
-  \item Gene-poor chromosomes and transcriptionally inactive regions are located at the nuclear periphery, where they contact the nuclear lamina. 
-\end{itemize}
+- Chromosomes occupy distinct subregions of the nucleus known as chromosome territories (CTs).
+
+- Transcriptionally inactive regions are enriched at the nuclear periphery, where they contact the nuclear lamina. 
+
+- Actively transcribed genes often colocalize at RNA polymerase II transcription factories. 
 
 \end{column}
 \begin{column}{0.48\textwidth}
@@ -77,20 +82,30 @@ https://www.nature.com/news/dna-s-secret-weapon-against-knots-and-tangles-1.2183
 \end{column}
 \end{columns}
 
-\tiny Boyle, S., S. Gilchrist, J. M. Bridger, N. L. Mahy, J. A. Ellis, and W. A. Bickmore. “The Spatial Organization of Human Chromosomes within the Nuclei of Normal and Emerin-Mutant Cells.” Human Molecular Genetics 10, no. 3 (February 1, 2001): 211–19.
+## Chromosomal territories
 
-Cremer, Marion, Johann Von Hase, Tanja Volm, Alessandro Brero, Gregor Kreth, Joachim Walter, Christine Fischer, Irina Solovei, Christoph Cremer, and Thomas Cremer. “Non-Random Radial Higher-Order Chromatin Arrangements in Nuclei of Diploid Human Cells.” Chromosome Research 9, no. 7 (2001): 541–567.
+\includegraphics[height=180px]{img/chromsome_territories.png}
+
+\tiny Kalhor, Reza, Harianto Tjong, Nimanthi Jayathilaka, Frank Alber, and Lin Chen. "Genome Architectures Revealed by Tethered Chromosome Conformation Capture and Population-Based Modeling". Nature Biotechnology, 2011. https://doi.org/10.1038/nbt.2057.
+
+## Gene-rich chromosomes are in the nuclear center, gene-poot - at the periphery
+
+\includegraphics[height=180px]{img/radial_chromosome_positions.png}
+
+\tiny Kalhor, Reza, Harianto Tjong, Nimanthi Jayathilaka, Frank Alber, and Lin Chen. Genome Architectures Revealed by Tethered Chromosome Conformation Capture and Population-Based Modeling. Nature Biotechnology, 2011. https://doi.org/10.1038/nbt.2057.
+
+<!--(c) Clustering of chromosomes with respect to the average distance between the center of mass of each chromosome pair in the genome structure population. The clustering dendrogram, which identifies two dominant clusters is shown on top. The matrix of average distances between pairs of chromosomes is shown at the bottom. The intensity of blue color increases with decreasing distance. (d) (Left panels) The density contour plot of the combined localization probability for all the chromosomes in cluster 1 (top panel) and cluster 2 (bottom panel) calculated from all the structures in the genome structure population. The rainbow color-coding on the central nuclear plane ranges from blue (minimum value) to red (maximum value). (Right panels) A representative genome 6 X structure from the genome structure population. Chromosome territories are shown for all the chromosomes in cluster 1 (top) and all the chromosomes in clusters 2 (bottom). The localization probabilities are calculated following a previously described procedure.-->
 
 ## Levels of Genome Organization
 
 \begin{columns}
 \begin{column}{0.48\textwidth}
 
-\begin{itemize}
-  \item The genome can be roughly partitioned into large A/B compartments corresponding to transcriptionally active/inactive chromatin, respectively.
-  \item Topologically associating domains (TADs) are regions of frequent local interactions separated by boundaries across which interactions are less frequent. 
-  \item CTCF and cohesin binding sites are enriched at TAD boundaries. 
-\end{itemize}
+- The genome can be roughly partitioned into large A/B compartments corresponding to transcriptionally active/inactive chromatin, respectively.
+
+- Topologically associating domains (TADs) are regions of frequent local interactions separated by boundaries across which interactions are less frequent. 
+
+- CTCF and cohesin binding sites are enriched at TAD boundaries. 
 
 \end{column}
 \begin{column}{0.48\textwidth}
@@ -100,17 +115,47 @@ Cremer, Marion, Johann Von Hase, Tanja Volm, Alessandro Brero, Gregor Kreth, Joa
 \end{column}
 \end{columns}
 
-## Hierarchical organization of the 3D structure of the genome
+## Hierarchical genome organization
 
 \begin{center}
 \includegraphics[height=120px]{img/3D_hierarchy.png}
 \end{center}
 
-Schematic representation of the organization of the 3D genome into A (blue) and B (red) compartments and topologically associated domains (TADs), which are composed of several sub-TADs spheres), which in turn harbor several chromatin loops.
+Schematic representation of the organization of the 3D genome into A (blue) and B (red) compartments and topologically associated domains (TADs), which are composed of several sub-TADs (depicted here as spheres), which in turn harbor several chromatin loops.
+
+<!--
+## Hierarchical structure of interphase chromatin
+
+\begin{center}
+\includegraphics[height=70px]{img/3D_structures_scale.jpg}
+\end{center}
+
+Chromosome territories (left) are partitioned into red and blue compartments formed by long-range spatial interactions between distant genome loci and containing transcriptionally more active or repressed genome regions, respectively. At a sub-megabase level, chromatin is folded into topologically associating domains (TADs, center), commonly interpreted as self-interacting globular structures. The internal structure of TADs is represented by arrays of chromatin loops (contact domains, right) formed by spatial contacts between CCCTC-binding factor (CTCF)/cohesin-binding sites. 
+
+\tiny Kantidze, Omar L., Katerina V. Gurova, Vasily M. Studitsky, and Sergey V. Razin. “The 3D Genome as a Target for Anticancer Therapy.” Trends in Molecular Medicine 26, no. 2 (February 2020): 141–49. https://doi.org/10.1016/j.molmed.2019.09.011.
+-->
+
+## 3D structure and the epigenetics
+
+\begin{center}
+\includegraphics[height=160px]{img/3d_epigenetics.png}
+\end{center}
+
+A combinatorial illustration showing TADs, CTCF bindings, corresponding epigenetic features, and long-range CTCF-mediated long-range interactions. 
+
+<!-- From up to bottom: (1) A Hi-C based interaction matrix. The grey scale above represents interaction frequencies. (2) The track of boundary interactions corresponding to the subdomains of each TAD. (3) CTCF binding sites involved in TAD or sub-domain boundaries are marked in dark red, while those not involved in domain boundaries are shown in pale red. (4) CTCF motifs involved in domain boundaries are in convergent direction. (5)(6) H3K36me3 (active) and H3K27me3 (inactive) mark the chromatin states of each TAD. (7) CTCF-mediated long-range interactions (from [36]). -->
+
+## Loop extrusion mechanism
+
+\begin{center}
+\includegraphics[height=160px]{img/CTCF_cohesin.png}
+\end{center}
+
+\tiny Fudenberg, Geoffrey, Maxim Imakaev, Carolyn Lu, Anton Goloborodko, Nezar Abdennur, and Leonid A. Mirny. “Formation of Chromosomal Domains by Loop Extrusion.” Cell Reports 15, no. 9 (May 31, 2016): 2038–49. https://doi.org/10.1016/j.celrep.2016.04.085
 
 ## Chromosome conformation capture technologies
 
-The core strategy in 3D genome mapping is nuclear **proximity ligation** (Cullen et al., 1993), which allows detection of distant genomic segments residing in close spatial proximity to one another, yet are linearly far away.
+The core strategy in 3D genome mapping is nuclear proximity ligation (Cullen et al., 1993), which allows detection of distant genomic segments residing in close spatial proximity to one another, yet are linearly far away.
 
 \begin{center}
 \includegraphics[height=110px]{img/proximity_ligation.png}
@@ -123,39 +168,54 @@ The core strategy in 3D genome mapping is nuclear **proximity ligation** (Cullen
 - **3C** focuses on contacts between two selected DNA fragments.
 - 3C-on chip (**4C**) and **Capture-C**-like approaches focus on all contacts made by one or more given DNA fragments of interest.
 - 3C carbon copy (**5C**) analyses contacts among multiple selected DNA fragments.
+- **Hi-C** provides an analysis of contacts among all genomic fragments. Requires deep sequencing (>20X RNA-seq, >600M reads)
 - Chromatin interaction analysis by paired-end tag (**ChIA-PET**) combines 3C with chromatin immunoprecipitation (ChIP) to analyse the contacts of sequences bound by a protein of interest.
-- **Hi-C** provides an analysis of contacts among all genomic fragments.
-- Other variants
 
 ## Chromosome conformation capture technologies
 
 \begin{center}
-\includegraphics[height=200px]{img/3C_technologies_table.png}
+\includegraphics[height=190px]{img/3C_technologies_table.png}
 \end{center}
 
-## General Hi-C data processing workflow
+## Cutting (aka restriction) enzymes
+
+- Recognize specific short sequences in the genome
+    - HindIII, recognizes a 6 bp motif AAGCTT
+    - EcoRI, recognizes a 6 bp motif GAATTC
+    - DpnII, recognizes a 4 bp motif GATC
+
+- Using a 6-bp cutting restriction enzyme, there are $\sim 10^6$ restriction fragments, leading to an interaction space on the order of $10^{12}$ possible pairwise interactions.
+- 4-cutters potentiate higher-resolution analyses of genome conformation by means of producing smaller restriction-fragment sizes, the total number of restriction fragments genome-wide is ~16-fold higher and the total number of possible pairwise contacts is 256-fold higher.
+
+## Hi-C sequencing products
+
+1. Two different, noncontiguous restriction fragments, indicating a potential interaction between the two fragments.
+2. Two ends map within the same restriction fragment, giving no information on chromatin topology.
+3. Two ends map to adjacent restriction fragments that are contiguous in the genome, either due to incomplete restriction digestion or re-ligation of the two fragments. Also noninformative.
+4. A concatemer of multiple restriction fragments.
+
+## Filtering mapped PETs
 
 \begin{center}
-\includegraphics[height=180px]{img/hic_workflow.png}
+\includegraphics[height=190px]{img/hic_filtering.png}
 \end{center}
 
-\tiny Han, Zhijun, and Gang Wei. “Computational Tools for Hi-C Data Analysis.” Quantitative Biology, 2017. https://doi.org/10.1007/s40484-017-0113-6.
+\tiny Han, Zhijun, and Gang Wei. "Computational Tools for Hi-C Data Analysis". Quantitative Biology, 2017. https://doi.org/10.1007/s40484-017-0113-6.
 
 ## Hi-C data
 
-- Paired-end sequencing, each pair is for a pair of interacting regions.
-- A typical Hi-C experiment produces 20x the number of reads as a standard RNA-seq experiment.
-- Sequencing counts are summarised into a 2D matrix:
-    - First, bin the genome into $N$ equal sized bins (size depends on sequencing depth).
-    - Summarize the read counts into $N \times N$ matrix. The element $(i, j)$ represents the number of pairs with one end from the $i$th window and the other end from the $j$th window.
-    - The counts represent the strength of interaction.
+- Paired-end sequencing,  each read in a pair is processed separately.
+- Usually summarized the counts into a 2D matrix:
+    - First cut genome into $N$ equal sized bins (size depends on sequencing depth).
+- Summarize the read counts into $N \times N$ matrix. The element $(i, j)$ represents the number of pairs with one end from the $i$th window and the other end from the $j$th window.
+- The counts represent the strength of interaction.
+- Usually the numbers on diagonal are greater.
 
 ## Hi-C interaction matrix
 
 \begin{center}
 \includegraphics[height=190px]{img/interaction_matrix.png}
 \end{center}
-
 
 ## Visualize Hi-C data in a heatmap
 
@@ -165,50 +225,34 @@ The core strategy in 3D genome mapping is nuclear **proximity ligation** (Cullen
 
 <!-- http://homer.ucsd.edu/homer/interactions/HiCmatrices.html -->
 
-## Decay of chromatin interactions with increasing distance between genomic regions
+## General Hi-C data processing workflow
 
 \begin{center}
-\includegraphics[height=130px]{img/distance_decay_log.png}
+\includegraphics[height=180px]{img/hic_workflow.png}
 \end{center}
 
-Interaction frequency as a function of genomic distance averaged across the genome shows a power law decay (linear on a log scale)<!-- between 500 kb and 7 Mb (shaded region) with a slope of $\sim 1.08$ (fit shown in cyan)-->.
+\tiny Han, Zhijun, and Gang Wei. “Computational Tools for Hi-C Data Analysis.” Quantitative Biology, 2017. https://doi.org/10.1007/s40484-017-0113-6.
+
+## Hi-C data analysis 
+
+\begin{center}
+\includegraphics[height=180px]{img/hic_analysis.png}
+\end{center}
+
+\tiny Serra, Francoois, Davide Bas, Mike Goodstadt, David Castillo, Guillaume J. Filion, and Marc A. Marti-Renom. "Automatic Analysis and 3D-Modelling of Hi-C Data Using TADbit Reveals Structural Features of the Fly Chromatin Colors". PLoS Computational Biology, 2017. https://doi.org/10.1371/journal.pcbi.1005665.
+
+
+## Distance-dependent decay of chromatin contacts
+
+\begin{center}
+\includegraphics[height=140px]{img/distance_decay_log.png}
+\end{center}
+
+Contact probability as a function of genomic distance averaged across the genome (blue) shows a power law scaling between 500 kb and 7 Mb (shaded region) with a slope of $\sim 1.08$ (fit shown in cyan).
 
 \tiny Lieberman-Aiden, Erez, Nynke L. van Berkum, Louise Williams, Maxim Imakaev, Tobias Ragoczy, Agnes Telling, Ido Amit, et al. "Comprehensive Mapping of Long-Range Interactions Reveals Folding Principles of the Human Genome." Science, 2009. https://doi.org/10.1126/science.1181369.
 
-## Basic partition of the genome into A/B compartments
 
-- **O/E matrix** - loci normalized to the average interaction frequency at that distance. Red/blue gradient highlights interactions more/less than expected at a given genomic distance.
-- **Pearson matrix** - correlation between the intrachromosomal interaction profiles for every pair of loci.
-- The plaid pattern indicates two compartments within the chromosome
-
-\begin{center}
-\includegraphics[height=90px]{img/ab_compartments1.png}
-\end{center}
-
-\tiny Lieberman-Aiden, Erez, Nynke L. van Berkum, Louise Williams, Maxim Imakaev, Tobias Ragoczy, Agnes Telling, Ido Amit, et al. “Comprehensive Mapping of Long-Range Interactions Reveals Folding Principles of the Human Genome.” Science (New York, N.Y.) 326, no. 5950 (October 9, 2009): 289–93. https://doi.org/10.1126/science.1181369.
-
-## Basic partition of the genome into A/B compartments
-
-\begin{columns}
-\begin{column}{0.48\textwidth}
-\begin{itemize}
-  \item Plaid patterns were consistently seen for all chromosomes. 
-  \item Genomic regions with the same sign of the first eigenvector (from PCA) had correlated contact profiles. The sign is used to assign A and B labels.
-  \item Compartment A correlates strongly with the presence of genes, high gene expression, accessible chromatin marks.
-\end{itemize}
-\end{column}
-\begin{column}{0.48\textwidth}
-  \includegraphics[height=150px]{img/ab_compartments.png}
-\end{column}
-\end{columns}
-
-\tiny Lieberman-Aiden, Erez, Nynke L. van Berkum, Louise Williams, Maxim Imakaev, Tobias Ragoczy, Agnes Telling, Ido Amit, et al. “Comprehensive Mapping of Long-Range Interactions Reveals Folding Principles of the Human Genome.” Science (New York, N.Y.) 326, no. 5950 (October 9, 2009): 289–93. https://doi.org/10.1126/science.1181369.
-
-## Reproducibility
-
-\begin{center}
-\includegraphics[height=190px]{img/reproducibility1.png}
-\end{center}
 
 ## Hi-C data biases
 
@@ -222,14 +266,9 @@ Interaction frequency as a function of genomic distance averaged across the geno
 ## Normalization methods
 
 - There are two general approaches to Hi-C bias correction: **explicit** and **implicit**. 
-    - **Explicit bias models** take into account factors such as mappability, GC content and fragment length. 
-
-## Normalization methods
-
-- There are two general approaches to Hi-C bias correction: **explicit** and **implicit**. 
-    - **Explicit bias models** take into account factors such as mappability, GC content and fragment length. 
-    - **Implicit approach**, aka matrix balancing, iterative correction, is based on the assumption that since we are interrogating the entire interaction space in an unbiased manner, each fragment/bin should be observed approximately the same number of times in the experiment (interpreted as the sum of the genome-wide row/column in the interaction matrix). 
-
+    - Explicit bias models take into account factors such as mappability, GC content and fragment length. 
+    - Implicit approach, aka matrix balancing, iterative correction, is based on the assumption that since we are interrogating the entire interaction space in an unbiased manner, each fragment/bin should be observed approximately the same number of times in the experiment (interpreted as the sum of the genome-wide row/column in the interaction matrix). 
+    
 ## Matrix balancing algorithms 
 
 The implicit or matrix-balancing approach does not require definition of predetermined factors that may introduce bias.
@@ -239,6 +278,26 @@ The implicit or matrix-balancing approach does not require definition of predete
     - The intrinsic fragment-specific biases can be represented as a single scalar value for each fragment that interacts multiplicatively with the intrinsic biases of its ligation partners. 
 
 - Idea: find a decomposition of the observed contact matrix into a vector of bias terms and a normalized contact map in which all rows have equal sums.
+
+## ICE - Iterative Correction and Eigenvalue decomposition, normalization of HiC data
+
+- Don't explicitly model sources of bias. Only assume:
+
+$$O_{i,j}=B_i * B_j * T_{i,j}$$
+where $B$ are bias vectors and $\sum_i T_{i,j} = 1$
+
+- Iterative correction algorithm, aka proportional fitting, aka matrix balancing
+- Different names - Sinkhorn-Knapp, Knight-Ruiz
+
+\tiny Imakaev, Maxim, Geoffrey Fudenberg, Rachel Patton McCord, Natalia Naumova, Anton Goloborodko, Bryan R. Lajoie, Job Dekker, and Leonid A. Mirny. “Iterative Correction of Hi-C Data Reveals Hallmarks of Chromosome Organization.” Nature Methods 9, no. 10 (October 2012): 999–1003. https://doi.org/10.1038/nmeth.2148
+
+## Matrix balancing
+
+\begin{center}
+\includegraphics[height=170px]{img/ICE.png}
+\end{center}
+
+\tiny https://github.com/hms-dbmi/hic-data-analysis-bootcamp
 
 ## Normalization of two or more Hi-C datasets
 
@@ -307,17 +366,71 @@ log_2(\hat{IF}_{2D}) = log_2(IF_{2D}) - f(D)/2
 
 \tiny Stansfield, John C., Kellen G. Cresswell, Vladimir I. Vladimirov, and Mikhail G. Dozmorov. “HiCcompare: An R-Package for Joint Normalization and Comparison of HI-C Datasets.” BMC Bioinformatics 19, no. 1 (December 2018). https://doi.org/10.1186/s12859-018-2288-x.
 
-## 3D genome structure controls functional interactions
+## Joint Loess Normalization of Hi-C Data
+
+\begin{columns}
+\begin{column}{0.48\textwidth}
+\begin{itemize}
+  \item Differences between two datasets should be minimal (symmetric around M = 0, Y-axis)
+  \item Perform loess regression on the MD plot to calculate $f(D)$ - the predicted interaction frequency $IF$ value at distance $D$
+  \item Adjust interaction frequencies
+\end{itemize}
+\end{column}
+\begin{column}{0.48\textwidth}
+  \includegraphics[height=120px]{img/normalization_loess.png}
+\end{column}
+\end{columns}
+
+\tiny Benchmarking study: Lyu, Hongqiang, Erhu Liu, and Zhifang Wu. “[Comparison of Normalization Methods for Hi-C Data](https://doi.org/10.2144/btn-2019-0105)” _BioTechniques_, October 7, 2019
+
+## A/B compartments detection
+
+- Genomic regions at two distinct nuclear compartments, labeled compartment A and compartment B, display high contact frequency within the same compartment and low contact frequency between the compartments. 
+    - Compartment A roughly corresponds to the euchromatin and features higher gene density;
+    - Compartment B corresponds to the heterochromatin and is largely made up of gene deserts. Also closely correlated with lamina-associated domains (LADs).
+
+- Principal component analysis (PCA) on intra- or inter-chromosomal Hi-C contact maps can be applied to designate compartments A and B. 
+    - The sign of the first eigenvector, guided by density of genes/active epigenetic marks, determines the compartment label.
+
+## Partition the genome into A/B compartments
+
+- **O/E matrix** - loci normalized to the average interaction frequency at that distance. Red/blue gradient highlights interactions more/less than expected at a given genomic distance.
+- **Pearson matrix** - correlation between the intrachromosomal interaction profiles for every pair of loci.
+- The plaid pattern indicates two compartments within the chromosome
+
+\begin{center}
+\includegraphics[height=90px]{img/ab_compartments1.png}
+\end{center}
+
+\tiny Lieberman-Aiden, Erez, Nynke L. van Berkum, Louise Williams, Maxim Imakaev, Tobias Ragoczy, Agnes Telling, Ido Amit, et al. “Comprehensive Mapping of Long-Range Interactions Reveals Folding Principles of the Human Genome.” Science (New York, N.Y.) 326, no. 5950 (October 9, 2009): 289–93. https://doi.org/10.1126/science.1181369.
+
+## Partition the genome into A/B compartments
+
+\begin{columns}
+\begin{column}{0.48\textwidth}
+\begin{itemize}
+  \item Plaid patterns were consistently seen for all chromosomes. 
+  \item Genomic regions with the same sign of the first eigenvector (from PCA) had correlated contact profiles. The sign is used to assign A and B labels.
+  \item Compartment A correlates strongly with the presence of genes, high gene expression, accessible chromatin marks.
+\end{itemize}
+\end{column}
+\begin{column}{0.48\textwidth}
+  \includegraphics[height=150px]{img/ab_compartments.png}
+\end{column}
+\end{columns}
+
+\tiny Lieberman-Aiden, Erez, Nynke L. van Berkum, Louise Williams, Maxim Imakaev, Tobias Ragoczy, Agnes Telling, Ido Amit, et al. “Comprehensive Mapping of Long-Range Interactions Reveals Folding Principles of the Human Genome.” Science (New York, N.Y.) 326, no. 5950 (October 9, 2009): 289–93. https://doi.org/10.1126/science.1181369.
+
+
+## TADs control functional interactions
 
 \begin{columns}
 \begin{column}{0.48\textwidth}
 
-\begin{itemize}
-  \item Disruptions of TADs lead to de novo enhancer-promoter interactions and misexpression.
-  \item Misexpression occurs when CTCF-associated TAD boundary elements are disrupted.
-  \item Structural variations disrupting TAD structures can cause malformation syndromes.
-  \item Different phenotypes can result from one enhancer acting on different target genes.
-\end{itemize}
+- Disruptions of TADs lead to de novo enhancer-promoter interactions and misexpression.
+- Misexpression occurs when CTCF-associated TAD boundary elements are disrupted.
+- Structural variations disrupting TAD structures can cause malformation syndromes.
+- Different phenotypes can result from one enhancer acting on different target genes.
 
 \end{column}
 \begin{column}{0.48\textwidth}
@@ -329,14 +442,27 @@ log_2(\hat{IF}_{2D}) = log_2(IF_{2D}) - f(D)/2
 
 \tiny Lupiáñez, Darío G., Katerina Kraft, Verena Heinrich, Peter Krawitz, Francesco Brancati, Eva Klopocki, Denise Horn, et al. “Disruptions of Topological Chromatin Domains Cause Pathogenic Rewiring of Gene-Enhancer Interactions.” Cell, 2015. https://doi.org/10.1016/j.cell.2015.04.004.
 
+## TADs control functional interactions
+
+\begin{center}
+\includegraphics[height=140px]{img/disruption_cancer.png}
+\end{center}
+
+- Insulator loss allows PDGFRA to interact with a constitutive enhancer and become overexpressed. 
+
+\tiny Flavahan, William A., Yotam Drier, Brian B. Liau, Shawn M. Gillespie, Andrew S. Venteicher, Anat O. Stemmer-Rachamimov, Mario L. Suvà, and Bradley E. Bernstein. “Insulator Dysfunction and Oncogene Activation in IDH Mutant Gliomas.” Nature, 2016. https://doi.org/10.1038/nature16490.
+
 ## TAD boundaries detection
 
 - Topologically associated domains (TADs) are defined as domains of increased self-interaction frequencies.
     - TAD boundaries are devoid of contacts crossing over them.
+- TADs and A/B compartments are two different modes of genome organization
 
 \begin{center}
-\includegraphics[height=100px]{img/tad_boundary.png}
+\includegraphics[height=80px]{img/tad_boundary.png}
 \end{center}
+
+\tiny Schwarzer, Wibke, Nezar Abdennur, Anton Goloborodko, Aleksandra Pekowska, Geoffrey Fudenberg, Yann Loe-Mie, Nuno A. Fonseca, et al. “Two Independent Modes of Chromatin Organization Revealed by Cohesin Removal.” Nature 551, no. 7678 (02 2017): 51–56. https://doi.org/10.1038/nature24281
 
 ## TAD boundary detection
 
@@ -354,6 +480,7 @@ E. Crane, Q. Bian, R.P. McCord, B.R. Lajoie, B.S. Wheeler, E.J. Ralston, S. Uzaw
 
 S.S. Rao, M.H. Huntley, N.C. Durand, E.K. Stamenova, I.D. Bochkov, J.T. Robinson, A.L. Sanborn, I. Machol, A.D. Omer, E.S. Lander, E.L. Aiden, A 3D map of the human genome at kilobase resolution reveals principles of chromatin looping, Cell 159 (7) (2014) 1665–1680.
 
+<!--
 ## TAD boundary detection
 
 2) Methods based on probabilistic models
@@ -374,9 +501,6 @@ S.S. Rao, M.H. Huntley, N.C. Durand, E.K. Stamenova, I.D. Bochkov, J.T. Robinson
 \tiny J. Chen, A.O. Hero 3rd, I. Rajapakse, Spectral identification of topological domains,
 Bioinformatics 32 (14) (2016) 2151–2158.
 
-## TAD boundary detection
-
-
 ## TAD boundaries detection
 
 - TAD boundaries can be detected by determining the ratio between its average upstream and downstream contacts (Naumova et al. 2013, Dixon et al. 2012). 
@@ -389,6 +513,7 @@ Bioinformatics 32 (14) (2016) 2151–2158.
 Sexton, T. et al. "Three-Dimensional Folding and Functional Organization Principles of the Drosophila Genome". Cell, 2012. https://doi.org/10.1016/j.cell.2012.01.010.
 
 Barutcu, A. et al. "Chromatin Interaction Analysis Reveals Changes in Small Chromosome and Telomere Clustering between Epithelial and Breast Cancer Cells". Genome Biology, 2015. https://doi.org/10.1186/s13059-015-0768-0.
+-->
 
 ## Spectral clustering for TAD boundary detection
 
@@ -415,37 +540,29 @@ Barutcu, A. et al. "Chromatin Interaction Analysis Reveals Changes in Small Chro
 \begin{itemize}
   \item Spectral clustering is designed to cluster graphs.
   \item Works by projecting the data into a lower dimensional space.
-  \item Excels on noisy and non-normally distributed data (Hi-C data).
+  \item Excels on noisy (Hi-C) and non-normally distributed data
 \end{itemize}
 
 \end{column}
 \end{columns}
 
-\tiny https://github.com/cresswellkg/SpectralTAD
+\tiny https://bioconductor.org/packages/SpectralTAD/
 
-## Domains control functional interactions in cancer
+Cresswell, Kellen G., John C. Stansfield, and Mikhail G. Dozmorov. “[SpectralTAD: An R Package for Defining a Hierarchy of Topologically Associated Domains Using Spectral Clustering](https://doi.org/10.1186/s12859-020-03652-w)” _BMC Bioinformatics_, July 20, 2020
 
-\begin{center}
-\includegraphics[height=140px]{img/disruption_cancer.png}
-\end{center}
-
-- Insulator loss allows PDGFRA to interact with a constitutive enhancer and become overexpressed. 
-
-\tiny Flavahan, William A., Yotam Drier, Brian B. Liau, Shawn M. Gillespie, Andrew S. Venteicher, Anat O. Stemmer-Rachamimov, Mario L. Suvà, and Bradley E. Bernstein. “Insulator Dysfunction and Oncogene Activation in IDH Mutant Gliomas.” Nature, 2016. https://doi.org/10.1038/nature16490.
-
-## Detecting significant interactions
+## Detecting chromatin loops
 
 - Hi-C maps not only provide large scale information about A/B compartments and TADs but can also detect loops between specific loci. 
 - The challenge is to distinguish true contacts from noise and define a background model that suitably represents the background frequency of interaction between pairs of loci in the absence of specific interactions. 
 - Need to account for the distance-dependent signal decay.
 
-## Detecting significant interactions
+## Detecting chromatin loops
 
 \begin{center}
 \includegraphics[height=180px]{img/hiccups.png}
 \end{center}
 
-## Detecting significant loop interactions
+## Detecting chromatin loops
 
 - Idea: perform a parametric fit to best describe the data or bin all pairs of loci with the same genomic distance and then, compute a P-value comparing the observed count for a given contact as compared with all other possible interactions in that bin (Duan et al. 2010). 
     - Background models can also take additional biases such as domain organization into account (HOMER, Fit-Hi-C)
@@ -455,7 +572,7 @@ Barutcu, A. et al. "Chromatin Interaction Analysis Reveals Changes in Small Chro
 
 http://homer.salk.edu/homer/, https://noble.gs.washington.edu/proj/fit-hi-c/
 
-## Detecting differential interactions
+## Methods for detecting chromatin loops
 
 - The **`HiCCUPS`** algorithm detects chromatin interaction "hotspots" within a Hi-C contact map and then can overlap hotspots between datasets. 
 
@@ -465,14 +582,21 @@ http://homer.salk.edu/homer/, https://noble.gs.washington.edu/proj/fit-hi-c/
 
 - **`FIND`** is an R package that uses a spatial Poisson process to detect differences in high resolution Hi-C datasets by treating interactions as spatially dependent on neighboring interactions. 
 
-## Detecting differential interactions
+## multiHiCcompare method for differential loop detection
+
+- **Distance-centric analysis** – each off-diagonal data slice has unique statistical properties  
+
+- Split Hi-C data into $d$ distance-centric matrices with $g$ rows (indices for interacting pairs of regions) and $i$ columns (samples)
 
 \begin{center}
-\includegraphics[height=180px]{img/HiC_differential_statistics.png}
+\includegraphics[height=80px]{img/HiC_differential_statistics.png}
 \end{center}
 
-\tiny https://bioconductor.org/packages/devel/bioc/html/multiHiCcompare.html
+\tiny https://bioconductor.org/packages/multiHiCcompare/
 
+Benchmarking study: Zheng, Ye, Peigen Zhou, and Sündüz Keleş. “[FreeHi-C Spike-in Simulations for Benchmarking Differential Chromatin Interaction Detection](https://doi.org/10.1016/j.ymeth.2020.07.001)” _Methods_, July 12, 2020
+
+<!--
 ## multiHiCcompare excels in detecting true differential interactions
 
 - Create simulated Hi-C matrices.
@@ -481,44 +605,20 @@ http://homer.salk.edu/homer/, https://noble.gs.washington.edu/proj/fit-hi-c/
 \begin{center}
 \includegraphics[height=150px]{img/multiHiCcompare_ROC.png}
 \end{center}
+-->
 
 ## Summary of Hi-C methods for TAD/loop identification
 
 \begin{center}
-\includegraphics[height=200px]{img/hic_methods.png}
+\includegraphics[height=130px]{img/hic_methods.png}
 \end{center}
 
 \tiny Li, Xiao, Ziyang An, and Zhihua Zhang. “Comparison of Computational Methods for 3D Genome Analysis at Single-Cell Hi-C Level.” Methods, August 2019, S1046202319300891. https://doi.org/10.1016/j.ymeth.2019.08.005.
 
+
 ## 3D genome reconstruction
 
 Given a map of self-contacts, how can you reconstruct the structures that produced it?
-
-- *Knowledge-based* - 3C or other data can be used as constraints.
-- *Mechanism-based* - propose a mechanism that organizes the genome and simulate it.
-
-## Popula:on-based modeling – use contacts as constraints
-
-- Assignment step: decide which contacts are most important for each individual structure.
-- Modeling step: op-mize the structure based on those constraints.
-
-\begin{center}
-\includegraphics[height=150px]{img/3D_modeling_population.png}
-\end{center}
-
-\tiny Tjong, Harianto, Wenyuan Li, Reza Kalhor, Chao Dai, Shengli Hao, Ke Gong, Yonggang Zhou, et al. “Population-Based 3D Genome Structure Analysis Reveals Driving Forces in Spatial Genome Organization.” Proceedings of the National Academy of Sciences of the United States of America 113, no. 12 (March 22, 2016): E1663-1672. https://doi.org/10.1073/pnas.1512577113.
-
-##  Single-cell modeling
-
-- With single-cell experiments, data is much more sparse, but corresponds to a unique structure.
-
-\begin{center}
-\includegraphics[height=150px]{img/3D_modeling_singlecell.png}
-\end{center}
-
-\tiny Stevens, Tim J., David Lando, Srinjan Basu, Liam P. Atkinson, Yang Cao, Steven F. Lee, Martin Leeb, et al. “3D Structures of Individual Mammalian Genomes Studied by Single-Cell Hi-C.” Nature, March 13, 2017. https://doi.org/10.1038/nature21429.
-
-## 3D genome reconstruction
 
 - Two different computational approaches for 3D modeling: 
     - Simulations of polymer physics, an approach that has been referred to as direct, as it does not rely on indirect methods such as chromatin conformation capture.
@@ -528,7 +628,7 @@ Given a map of self-contacts, how can you reconstruct the structures that produc
 
 Serra, Francois, Marco Di Stefano, Yannick G. Spill, Yasmina Cuartero, Michael Goodstadt, Davide Bas, and Marc A. Marti-Renom. "Restraint-Based Three-Dimensional Modeling of Genomes and Genomic Domains". FEBS Letters, 2015. https://doi.org/10.1016/j.febslet.2015.05.012.
 
-## 3D genome reconstruction
+## 3D genome reconstruction (ShRec3D)
 
 \begin{center}
 \includegraphics[height=160px]{img/3D_reconstruction_ShRec3D.png}
@@ -537,15 +637,19 @@ Serra, Francois, Marco Di Stefano, Yannick G. Spill, Yasmina Cuartero, Michael G
 \tiny Lesne, Annick, Julien Riposo, Paul Roger, Axel Cournac, and Julien Mozziconacci. “3D Genome Reconstruction from Chromosomal Contacts.” Nature Methods 11, no. 11 (November 2014): 1141–43. https://doi.org/10.1038/nmeth.3104.
 
 
-## 3D structure and the epigenetics
+## Reproducibility
 
 \begin{center}
-\includegraphics[height=160px]{img/3d_epigenetics.png}
+\includegraphics[height=190px]{img/reproducibility1.png}
 \end{center}
 
-A combinatorial illustration showing TADs, CTCF bindings, corresponding epigenetic features, and long-range CTCF-mediated long-range interactions. 
+## HiCRep
 
-<!-- From up to bottom: (1) A Hi-C based interaction matrix. The grey scale above represents interaction frequencies. (2) The track of boundary interactions corresponding to the subdomains of each TAD. (3) CTCF binding sites involved in TAD or sub-domain boundaries are marked in dark red, while those not involved in domain boundaries are shown in pale red. (4) CTCF motifs involved in domain boundaries are in convergent direction. (5)(6) H3K36me3 (active) and H3K27me3 (inactive) mark the chromatin states of each TAD. (7) CTCF-mediated long-range interactions (from [36]). -->
+\begin{center}
+\includegraphics[height=170px]{img/hicrep.png}
+\end{center}
+
+\tiny Yang, Tao, Feipeng Zhang, Galip Gurkan Yardimci, Ross C Hardison, William Stafford Noble, Feng Yue, and Qunhua Li. “HiCRep: assessing the reproducibility of Hi-C data using a stratum-adjusted correlation coefficient.” Genome Research, August 7, 2017, https://genome.cshlp.org/content/early/2017/10/06/gr.220640.117
 
 ## Multi-omics integration
 
@@ -554,6 +658,7 @@ A combinatorial illustration showing TADs, CTCF bindings, corresponding epigenet
 \end{center}
 
 \tiny Kong, Siyuan, and Yubo Zhang. “Deciphering Hi-C: From 3D Genome to Function.” Cell Biology and Toxicology, January 4, 2019. https://doi.org/10.1007/s10565-018-09456-2.
+
 
 ## Single-cell Hi-C
 
@@ -565,21 +670,29 @@ A combinatorial illustration showing TADs, CTCF bindings, corresponding epigenet
 
 \tiny Nagano,T.et al. "Single-cell Hi-C reveals cell-to-cell variability in chromosome structure". Nature, 2013.
 
+##  Single-cell modeling
+
+- With single-cell experiments, data is much more sparse, but corresponds to a unique structure.
+
+\begin{center}
+\includegraphics[height=150px]{img/3D_modeling_singlecell.png}
+\end{center}
+
+\tiny Stevens, Tim J., David Lando, Srinjan Basu, Liam P. Atkinson, Yang Cao, Steven F. Lee, Martin Leeb, et al. “3D Structures of Individual Mammalian Genomes Studied by Single-Cell Hi-C.” Nature, March 13, 2017. https://doi.org/10.1038/nature21429.
+
 ## Other use of Hi-C: Genome reassembly
 
+Reconstruction of microbial genomes
 
-## Reconstruction of microbial genomes
-
-proximeta.png
+\begin{center}
+\includegraphics[height=150px]{img/proximeta.png}
+\end{center}
 
 \tiny Press, Maximilian O., Andrew H. Wiser, Zev N. Kronenberg, Kyle W. Langford, Migun Shakya, Chien-Chi Lo, Kathryn A. Mueller, Shawn T. Sullivan, Patrick S. G. Chain, and Ivan Liachko. “Hi-C Deconvolution of a Human Gut Microbiome Yields High-Quality Draft Genomes and Reveals Plasmid-Genome Interactions.,” October 5, 2017. https://doi.org/10.1101/198713.
 
-Schematic of the ProxiMeta method for metage- nomic deconvolution. a) First, a sample consisting of mixed organisms is cross-linked with formaldehyde. Cross-links among DNA molecules are highlighted in red. b) DNA extraction yields a population of cross- linked DNAs with free ends from restriction cleavage. These free DNA ends are re-ligated and the result- ing molecules read out with paired-end sequencing. c) Sequences ligated together and sequenced yield linkages between DNA contigs or scaffolds from an independently-generated sequence assembly. These linkages are used in clustering algorithms to decon- volute which DNAs derive from the same cell.
-
-## Conclusion on Hi-C data
-
-- Technology to detect chromosomal interactions using sequencing.
-- Usually requires more reads.
-- Still in very early infancy in terms of analysis methods. A lot of room for development.
+Schematic of the ProxiMeta method for metagenomic deconvolution. a) First, a sample consisting of mixed organisms is cross-linked with formaldehyde. Cross-links among DNA molecules are highlighted in red. b) DNA extraction yields a population of cross-linked DNAs with free ends from restriction cleavage. These free DNA ends are re-ligated and the result- ing molecules read out with paired-end sequencing. c) Sequences ligated together and sequenced yield linkages between DNA contigs or scaffolds from an independently-generated sequence assembly. These linkages are used in clustering algorithms to decon- volute which DNAs derive from the same cell.
 
 
+## Many more methods, technologies, discoveries
+
+https://github.com/mdozmorov/HiC_tools
