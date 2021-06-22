@@ -279,6 +279,34 @@ The implicit or matrix-balancing approach does not require definition of predete
 
 - Idea: find a decomposition of the observed contact matrix into a vector of bias terms and a normalized contact map in which all rows have equal sums.
 
+## Knight-Ruiz (KR)
+<!-- Source: Liu, Tong, and Zheng Wang. “NormGAM: An R Package to Remove Systematic Biases in Genome Architecture Mapping Data.” BMC Genomics 20, no. S12 (December 2019): 1006. https://doi.org/10.1186/s12864-019-6331-8.-->
+
+- Given a non-negative symmetric matrix $D$, the algorithm tries to find a vector $x$ such that
+$$diag(x)Dx = e$$
+
+where $diag(x)$ is a diagonal matrix converted from $x$, and $e$ represents a vector of all ones.
+
+- Balancing a matrix in the 1-norm.
+
+\tiny Knight, P. A., and D. Ruiz. “A Fast Algorithm for Matrix Balancing.” IMA Journal of Numerical Analysis, July 1, 2013 https://doi.org/10.1093/imanum/drs019
+
+## Vanilla coverage (VC)
+
+$$diag(x)Dx = e$$
+
+- $e_i$ is 1-norm of the $i$th row, $e_j$ is 1-norm of the $j$th column
+
+\tiny Lieberman-Aiden, Erez, Nynke L. van Berkum, Louise Williams, Maxim Imakaev, Tobias Ragoczy, Agnes Telling, Ido Amit, et al. “Comprehensive Mapping of Long-Range Interactions Reveals Folding Principles of the Human Genome.” Science (New York, N.Y.) 326, no. 5950 (October 9, 2009): 289–93. https://doi.org/10.1126/science.1181369.
+
+## Sequential Component Normalization (SCN)
+
+$$diag(x)Dx = e$$
+
+- $e_i$ is 2-norm of the $i$th row, $e_j$ is 2-norm of the $j$th column
+
+\tiny Cournac, Axel, Hervé Marie-Nelly, Martial Marbouty, Romain Koszul, and Julien Mozziconacci. “Normalization of a Chromosomal Contact Map.” BMC Genomics 13 (2012): 436. https://doi.org/10.1186/1471-2164-13-436.
+
 ## ICE - Iterative Correction and Eigenvalue decomposition, normalization of HiC data
 
 - Don't explicitly model sources of bias. Only assume:
@@ -286,8 +314,9 @@ The implicit or matrix-balancing approach does not require definition of predete
 $$O_{i,j}=B_i * B_j * T_{i,j}$$
 where $B$ are bias vectors and $\sum_i T_{i,j} = 1$
 
-- Iterative correction algorithm, aka proportional fitting, aka matrix balancing
-- Different names - Sinkhorn-Knapp, Knight-Ruiz
+<!-- $e_i$ is 1-norm of the $i$th row divided by its mean value over non-zero bins, $e_j$ is 1-norm of the $j$th column divided by its mean value over non-zero bins-->
+- Two stopping criteria, the maximum iteration and error tolerance.
+- Different names - Sinkhorn-Knapp, Knight-Ruiz.
 
 \tiny Imakaev, Maxim, Geoffrey Fudenberg, Rachel Patton McCord, Natalia Naumova, Anton Goloborodko, Bryan R. Lajoie, Job Dekker, and Leonid A. Mirny. “Iterative Correction of Hi-C Data Reveals Hallmarks of Chromosome Organization.” Nature Methods 9, no. 10 (October 2012): 999–1003. https://doi.org/10.1038/nmeth.2148
 
