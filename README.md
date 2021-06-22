@@ -28,3 +28,7 @@ Sequencing of the human genome provides a wealth of knowledge about genome regul
 ## Videos
 
 - Video lecture by Feng Yu [1](https://www.youtube.com/watch?v=ddyWbxjkhos), [2](https://www.youtube.com/watch?v=qQIlqTTTLcA), [3](https://www.youtube.com/watch?v=ytVxgHG5REg), [4](https://www.youtube.com/watch?v=Lgu4HHDpqOI), [5](https://www.youtube.com/watch?v=odA3uAMx1pA), [6](https://www.youtube.com/watch?v=is8RwBGl1r4), [7](https://www.youtube.com/watch?v=LNq5fcFhaLk), [8](https://www.youtube.com/watch?v=Q3-8R1gs-eU)
+
+## misc
+
+- `BS222_Lecture6_3Dgenome_v10_2019.pptx` - lecture by [Vladimir Teif(https://twitter.com/TeifLab). [Tweet(https://twitter.com/TeifLab/status/1405261343767289862?s=20)
